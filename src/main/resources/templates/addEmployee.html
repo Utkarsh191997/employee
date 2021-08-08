@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registation Form</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<script type="text/javascript">
+var countryByCategory = {
+	India: ["Karnataka", "UP"],
+    China: ["Gansu", "Fujian"],
+    USA: ["California", "Texas"]
+
+}
+
+    function changecat(value) {
+        if (value.length == 0) document.getElementById("state").innerHTML = "<option></option>";
+        else {
+            var catOptions = "";
+            for (categoryId in countryByCategory[value]) {
+                catOptions += "<option>" + countryByCategory[value][categoryId] + "</option>";
+            }
+            document.getElementById("state").innerHTML = catOptions;
+        }
+    }
+function valid(){
+var a=document.getElementById("name").value;
+var correct = /^[A-Za-z]+$/;
+if(a.match(correct))
+{
+true;
+}
+else{
+document.getElementById("Message").innerHTML="** only alphabets are allowed";
+return false;
+}
+}
+
+
+    function validate(){
+    if(document.register.Name.value =="")
+    {
+    alert("Please provide Your Country!");
+    document.register.Name.focus();
+    return false;
+    }
+    }
+
+
+function specialcharecter()
+
+            {
+
+                var iChars = "!`@#$%^&*()+=-[]\\\';,./{}|\":<>?~_";
+
+                var data = document.getElementById("name").value;
+
+                for (var i = 0; i < data.length; i++)
+
+                {
+
+                    if (iChars.indexOf(data.charAt(i)) != -1)
+
+                    {
+
+                    alert ("Your string has special characters. \nThese are not allowed.");
+
+                    document.getElementById("name").value = "";
+
+                    return false;
+
+                    }
+
+                }
+
+            }
+
+
+</script>
+<style>
+input:required:invalid,input:focus:invalid{
+-moz-box-shadow:none;
+}
+    body {
+
+background-image: url("maldives-island.jpg");
+background-size: 140%;
+background-position: -400px 0px;
+}
+div.main
+{
+width: 400px;
+margin: 20px auto 0 auto;
+}
+h2
+{
+text-align: center;
+padding: 10px;
+}
+div.Register
+{
+background-color: rgba(0,0,0,0.5);
+width: 100%;
+font-size: 18px;
+border-radius: 10px;
+border:1px soid rgba(255,255,255,0.3);
+box-shadow: 2px 2px 15px
+rgba(0,0,0,0.3);
+color:#fff;
+}
+form#register{
+margin: 40px;
+}
+input#submit
+{
+width: 150px;
+padding: 7px;
+border-radius: 3px;
+background-color: rgba(250,100,0,0.8);
+color: #fff;
+}
+input#reset
+{
+width: 150px;
+padding: 7px;
+border-radius: 3px;
+background-color: rgba(250,100,0,0.8);
+color: #fff;
+}
+
+
+
+
+</style>
+
+<body>
+<div class="main">
+    <div class="Register">
+        <h2><b>Register Here</b></h2>
+        <form id="register" action="#" th:action="@{/addEmployee}" th:object="${employee}" method="post">
+
+            <p>
+                ID: <input type="number" name="id" placeholder="Enter your ID" field="*{id}">
+            </p>
+            <p>
+                Name: <input type="text"  id="name" maxlength="15" minlength="2"  name="name" placeholder="Enter your Name" onblur="valid()" field="*{name}">
+
+                <br><span id="Message"> </span>
+            </p>
+            <p>
+                Email: <input type="email" name="email" placeholder="Enter your Email" field="*{email}">
+            </p>
+            <p>
+                Number: <input type="number" name="number"  placeholder="Enter your Number" field="*{number}">
+            </p>
+            <p>
+                Address:
+            </p>
+            <p>
+                Country: <select name="country" id="country" onchange="changecat(this.value);" field="*{country}">
+                <option value="" disabled selected>Select</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+            </select>
+            </p>
+            <p>
+                State: <select name="state" id="state"  field="*{state}">
+                <option value="" disabled selected>Select</option>
+
+            </select>
+            </p>
+
+            <p>
+                Pincode: <input type="number" name="pinCode" size="6" placeholder="Enter your PinCode" field="*{pinCode}">
+            </p>
+            <p>
+                Landmark: <input type="text" name="landmark" placeholder="Enter your Landmark" field="*{landmark}">
+            </p>
+            <p>
+                Reporting Manager: <input type="text" name="reportingManager" placeholder="Enter your Reporting Manager Name" field="*{reportingManager}">
+            </p>
+            <p>
+                Department: <select name="department"  field="*{department}">
+                <option value="Select">Select</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+            </select>
+            <p>
+                <input type="submit" value="Submit" name="submit" id="submit"/>
+
+            <input type="reset" value="Reset" name="reset" id="reset">
+            </p>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
