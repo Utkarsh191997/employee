@@ -15,15 +15,28 @@ You Can view your Saved Data by using the Endpoint "employee", Data will look li
 
 For the country and state field, we have created a dynamic drop down.
 We have added three countries here.
+![Screenshot (384)](https://user-images.githubusercontent.com/47950367/128643954-af90315f-1b19-42fe-acd2-8a404a15d020.png)
+
+If we Select India here, the India states will appear in the state field
+![Screenshot (387)](https://user-images.githubusercontent.com/47950367/128643968-518bfbd0-28f6-49f0-b8c4-0c8af6f6349e.png)
+
+
+If we Select USA here, the USA states will appear in the state field
+![Screenshot (385)](https://user-images.githubusercontent.com/47950367/128643959-bcbc3706-5e04-4f0f-8df1-45e3d511b66d.png)
+
+If we Select China here, the China states will appear in the state field
+![Screenshot (386)](https://user-images.githubusercontent.com/47950367/128643965-5a8e7422-e733-456e-be58-4ddb43ad6860.png)
+
+
+
+In Some of the fields, we have Implemented a Validation.
+
+In the name field, only alphabets are allowed, if we have inserted any special character & Numeric character, this alert message will appear
 
 ![Screenshot (381)](https://user-images.githubusercontent.com/47950367/128643944-f522cfbd-6b44-4c5c-94e2-2047f059bbaf.png)
+
+In the Email field, If the Mail is not in proper format, error message will appear
 ![Screenshot (382)](https://user-images.githubusercontent.com/47950367/128643949-0bf779f5-37dd-4d99-9c84-c4b648ecb51e.png)
-![Screenshot (383)](https://user-images.githubusercontent.com/47950367/128643950-4f6701ef-ecbe-44df-85bb-88d186ed5a06.png)
-![Screenshot (384)](https://user-images.githubusercontent.com/47950367/128643954-af90315f-1b19-42fe-acd2-8a404a15d020.png)
-![Screenshot (385)](https://user-images.githubusercontent.com/47950367/128643959-bcbc3706-5e04-4f0f-8df1-45e3d511b66d.png)
-![Screenshot (386)](https://user-images.githubusercontent.com/47950367/128643965-5a8e7422-e733-456e-be58-4ddb43ad6860.png)
-![Screenshot (387)](https://user-images.githubusercontent.com/47950367/128643968-518bfbd0-28f6-49f0-b8c4-0c8af6f6349e.png)
-![Screenshot (388)](https://user-images.githubusercontent.com/47950367/128643970-3155f2b2-8c2a-4c7c-b383-dbef6a199477.png)
-
-
+ 
+And in the Number field only Numeric Value is allowed, we are not able to add Special character and Alphabets in this field as we have given Integer "int" data for this field.
 
