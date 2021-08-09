@@ -13,6 +13,8 @@ After submitting the Data, this Confirmation window will open, that means your D
 You Can view your Saved Data by using the Endpoint "employee", Data will look like this
 ![Screenshot (380)](https://user-images.githubusercontent.com/47950367/128643979-752e9d18-539d-4cad-b1b9-84ced00002eb.png)
 
+For the country and state field, we have created a dynamic drop down.
+We have added three countries here.
 
 ![Screenshot (381)](https://user-images.githubusercontent.com/47950367/128643944-f522cfbd-6b44-4c5c-94e2-2047f059bbaf.png)
 ![Screenshot (382)](https://user-images.githubusercontent.com/47950367/128643949-0bf779f5-37dd-4d99-9c84-c4b648ecb51e.png)
