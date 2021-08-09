@@ -38,5 +38,5 @@ In the name field, only alphabets are allowed, if we have inserted any special c
 In the Email field, If the Mail is not in proper format, error message will appear
 ![Screenshot (382)](https://user-images.githubusercontent.com/47950367/128643949-0bf779f5-37dd-4d99-9c84-c4b648ecb51e.png)
  
-And in the Number field only Numeric Value is allowed, we are not able to add Special character and Alphabets in this field as we have given Integer "int" data for this field.
+And in the Number field only Numeric Value is allowed, we are not able to add Special character and Alphabets in this field as we have defined Integer "int" datatype for this field.
 
